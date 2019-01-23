@@ -17,19 +17,19 @@ example_NMDS=metaMDS(volatiles.matrix, # Our community-by-species matrix
                      k=2) # The number of reduced dimensions
 stressplot(example_NMDS)
 plot(example_NMDS)
-treat=c(rep("Bacillus",9),rep("Control",5),rep("Red",9),rep("White",8))
+treat=c(rep("Bacillus",9),rep("Red",8),rep("White",8))
 ordiplot(example_NMDS,type="n")
 ordihull(example_NMDS,groups=treat,draw="polygon",col="grey90",label=F)
-orditorp(example_NMDS,display="sites",col=c(rep("green",9),rep("blue",5),rep("red",9),rep("black",8)),
+orditorp(example_NMDS,display="sites",col=c(rep("blue",9),rep("red",8),rep("black",8)),
    air=0.01,cex=1.25)
 
 
 setwd("/Volumes/GoogleDrive/My Drive/Manuscripts/Fungal Response/")
 pdf("NMDS.pdf", height = 12, width = 12)
 plot(example_NMDS)
-treat=c(rep("Bacillus",9),rep("Control",5),rep("Red",9),rep("White",8))
+treat=c(rep("Bacillus",9),rep("Red",8),rep("White",8))
 ordiplot(example_NMDS,type="n")
 ordihull(example_NMDS,groups=treat,draw="polygon",col="grey90",label=F)
-orditorp(example_NMDS,display="sites",col=c(rep("green",9),rep("blue",5),rep("red",9),rep("black",8)),
+orditorp(example_NMDS,display="sites",col=c(rep("blue",9),rep("red",8),rep("black",8)),
    air=0.01,cex=1.25)
 dev.off()
